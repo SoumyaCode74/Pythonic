@@ -1,5 +1,5 @@
 '''
-Th
+For Python Data structures
 '''
 print('='*10,'Dictionaries','='*10)
 pairs = {1: "apple",
