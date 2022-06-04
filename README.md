@@ -5,7 +5,7 @@
 * Udemy projects courses
 * Coursera projects courses
 * Anything else.....??
-##Problems solved
+## Problems solved
 Problem 1.:
 ### Statement
 Given a string as input, you need to output how many times each letter appears in the string.
