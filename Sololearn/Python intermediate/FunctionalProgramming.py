@@ -39,3 +39,45 @@ print("Through conventional definition: ", polynomial(-4,2))
 
 #lambda
 print("Through anonymous function", (lambda x,y: x**2 + 5*y + 4) (-4,2))
+print("Maps & Filters",stars)
+print("Maps")
+#Maps : function that makes a function operate on each item of an iterable and return a new iterable
+print("without using map functional", dashes)
+def add_two_numbers(x,y):
+    return x+y
+nums1 = range(1,10)
+nums2 = range(10,20)
+new_nums = list()
+for i in range(len(nums1)):
+    new_nums.append(add_two_numbers(nums1[i], nums2[i]))
+print("List of added numbers: ", new_nums)
+print("with using map functional", dashes)
+new_nums = []
+new_nums = list(map(lambda x,y:x+y, nums1,nums2))
+print("List of added numbers: ", new_nums)
+print(dashes)
+salaries = [2000, 1800, 3100, 4400, 1500]
+bonus = 10
+salaries = list(map(lambda salary: salary * (1+0.01*bonus), salaries))
+print("Incremented salary list with 10% bonus", salaries)
+print(dashes*3)
+print("Filters")
+#filter: same as map only returns a "filtered"
+# list of objects from the passed on iterable that satisfies the condition
+nums = list(range(1,30))
+nums_odd = list(filter(lambda x: x%2 != 0, nums))
+nums_even = list(filter(lambda x: x%2 == 0, nums))
+print("List of numbers", nums)
+print("List of odd numbers", nums_odd)
+print("List of even numbers", nums_even)
+print(dashes*3)
+print("Generators")
+def countdown():
+    i=5
+    while i > 0:
+        yield i
+        i -= 1
+
+for i in countdown():
+    print(i)
+
