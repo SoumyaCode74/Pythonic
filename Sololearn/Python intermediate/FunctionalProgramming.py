@@ -86,4 +86,47 @@ def numbers(x):
             yield i
 
 print(list(numbers(11)))
+print(dashes*3)
+print("Decorators")
+#Decorators: Decorators provide a way to modify functions using other functions.
+#This is ideal when you need to extend the functionality of functions that you don't want to modify.
+def decor(func):
+    def wrap():
+        print("============")
+        func()
+        print("============")
+    return wrap
+
+def print_text():
+    print("Hello world!")
+
+print_text = decor(print_text)
+print_text()
+print(dashes)
+def decor(func):
+    def wrap():
+        print("============")
+        func()
+        print("============")
+    return wrap
+
+@decor
+def print_text():
+    print("Hello world!")
+
+print_text()
+print(dashes*2)
+def decor(func):
+    def wrap(arg):
+        print('*'*3)
+        func(arg)
+        print('*'*3)
+        print("END OF PAGE")
+    return wrap
+
+@decor
+def invoice(num):
+    print("INVOICE #" +num)
+
+invoice('225')
 
