@@ -130,3 +130,41 @@ def invoice(num):
 
 invoice('225')
 
+def heading_decor(func):
+    def wrap(msg):
+        print('*'*10,end = " ")
+        func(msg)
+        print('*'*10)
+    return wrap
+
+def subheading_decor(func):
+    def wrap(msg):
+        print('-'*10,end = " ")
+        func(msg)
+        print('-'*10)
+    return wrap
+
+
+@heading_decor
+def print_heading(heading):
+    print(heading, end = " ")
+
+@subheading_decor
+def print_subheading(subheading):
+    print(subheading, end=" ")
+
+print_heading("Using decorated headings")
+
+print_heading("Variable args and named args")
+print_subheading("Minimum number")
+
+
+def my_min(*args):
+    minimum = args[0]
+    for i in range(1, len(args)):
+        if args[i] < minimum:
+            minimum = args[i]
+    return minimum
+
+print("The minimum value is: ", my_min(8, 13, 4, 42, 120, 7))
+
