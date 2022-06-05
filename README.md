@@ -32,3 +32,27 @@ Sample Input
 Sample Output
 [11, 13, 17, 19]
 ### Solution: Problems\PrimeNumberGenerator.py
+
+Problem 3.:
+### Statement
+Decimal to Binary:
+Sample Input
+8
+
+Sample Output
+1000
+
+### Solution: Problems\Dec2Bin.py
+
+Problem 4.:
+### Statement
+In this problem, the objective is to print the list of fibonacci numbers between two specified numbers
+
+Sample input
+Enter the start value 1
+Enter the last value 3
+
+Sample output
+The list of fibonacci numbers from 1 to 3 is: [1,2,3]
+
+### Solution: Problems\FibonacciGenerator.py
