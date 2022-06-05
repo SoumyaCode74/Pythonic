@@ -56,3 +56,21 @@ Sample output
 The list of fibonacci numbers from 1 to 3 is: [1,2,3]
 
 ### Solution: Problems\FibonacciGenerator.py
+
+Problem 5.:
+### Statement
+#### Spelling Backwards
+
+Given a string as input, use recursion to output each letter of the strings in reverse order, on a new line.
+
+Sample Input
+HELLO
+
+Sample Output
+O
+L
+L
+E
+H
+
+### Solution: Problems\SpellBackwards.py
